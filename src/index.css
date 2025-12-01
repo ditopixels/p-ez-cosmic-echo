@@ -74,9 +74,9 @@ All colors MUST be HSL.
     background-attachment: fixed;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-wider uppercase;
-  }
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-bold tracking-wider uppercase;
+}
 
   /* Smooth Scrolling */
   html {
