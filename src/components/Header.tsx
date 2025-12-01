@@ -48,9 +48,9 @@ export const Header = () => {
 
           {/* Social Icons & Join Button */}
           <div className="flex items-center gap-4">
-            <div className="hidden items-center gap-3 md:flex">
+            <div className="flex items-center gap-3">
               <a
-                href="https://open.spotify.com/intl-es/artist/2bUSj1voRALClpYNwVQBLT?si=cLOFBEkqRRSQ2j-iCpLjFw"
+                href="https://open.spotify.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all hover:scale-110 hover:text-primary"
@@ -59,7 +59,7 @@ export const Header = () => {
                 <Music className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com/paez.of"
+                href="https://instagram.com/paez_of"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all hover:scale-110 hover:text-primary"
@@ -68,7 +68,7 @@ export const Header = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://www.youtube.com/@paezof"
+                href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all hover:scale-110 hover:text-primary"

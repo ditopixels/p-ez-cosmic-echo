@@ -28,7 +28,7 @@ export const NewsletterForm = () => {
 
       console.log('Newsletter subscription successful:', data);
       toast.success('¡Gracias por suscribirte!', {
-        description: 'Revisa tu correo para confirmar tu suscripción.',
+        description: 'Tu información ha sido registrada exitosamente.',
       });
       setFormData({ email: '', name: '', country: '' });
     } catch (error: any) {

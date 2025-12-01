@@ -18,17 +18,51 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen scroll-smooth">
+    <div className="min-h-screen scroll-smooth snap-y snap-mandatory overflow-y-scroll">
       <Header />
 
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen overflow-hidden pt-16 snap-start snap-always">
-        <div className="container mx-auto px-4 py-12 lg:px-8 lg:py-20">
-          <div className="grid gap-8 lg:grid-cols-3 lg:gap-12">
+        {/* Video Background */}
+        <video
+          id="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+          poster={artistPortrait}
+        >
+          <source src="https://cdn.coverr.co/videos/coverr-silhouette-of-a-person-on-a-desert-6545/1080p.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50" />
+
+        {/* Mute/Unmute Button */}
+        <button
+          onClick={(e) => {
+            const video = document.getElementById('hero-video') as HTMLVideoElement;
+            if (video) {
+              video.muted = !video.muted;
+              const btn = e.currentTarget;
+              btn.innerHTML = video.muted 
+                ? '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/></svg>' 
+                : '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M17.5 6a8 8 0 0 1 0 12"/></svg>';
+            }
+          }}
+          className="absolute top-24 right-4 lg:right-8 z-10 p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all hover:scale-110"
+          aria-label="Toggle mute"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/></svg>
+        </button>
+
+        <div className="container relative z-10 mx-auto px-4 py-12 lg:px-8 lg:py-20">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 min-h-[calc(100vh-8rem)]">
             {/* Left Column - Poetic Text */}
-            <div className="flex items-center lg:items-start">
-              <div className="space-y-4">
-                <p className="max-w-sm text-lg leading-relaxed text-foreground/90 lg:text-xl">
+            <div className="flex items-center justify-center">
+              <div className="space-y-6 text-center lg:text-left max-w-xl backdrop-blur-md bg-black/30 p-8 rounded-lg">
+                <p className="text-2xl leading-relaxed text-white font-bold lg:text-3xl">
                   Y EL FUEGO ARRASÓ CON LA SONRISA QUE UN DÍA FUE, SIENDO TODO...
                   CONVERTIDOS EN NADA, SIENDO NADA... TAN FALTOS DE TODO; ENTRE RASTROS DE
                   ABRAZOS, ENTRE AUSENCIA Y DOLOR.
@@ -36,29 +70,14 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Center Column - Artist Image */}
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-lg">
-                <img
-                  src={artistPortrait}
-                  alt="PÁEZ - Artist Portrait"
-                  className="h-auto w-full object-cover lg:h-[600px]"
-                  style={{
-                    maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
-                  }}
-                />
-              </div>
-            </div>
-
             {/* Right Column - New Release */}
-            <div className="flex items-start justify-center lg:justify-start">
+            <div className="flex items-center justify-center">
               <div className="w-full max-w-sm space-y-6">
-                <h2 className="text-xl font-bold tracking-[0.15em] text-primary font-display">
+                <h2 className="text-xl font-bold tracking-[0.15em] text-white font-display text-center">
                   NUEVO LANZAMIENTO
                 </h2>
 
-                <div className="relative overflow-hidden rounded-lg border border-border/50 bg-card/30 p-6 backdrop-blur-sm">
+                <div className="relative overflow-hidden rounded-lg border border-white/20 bg-black/50 p-6 backdrop-blur-lg">
                   <img
                     src={albumCover}
                     alt="Corazón Ceniza Album Cover"
@@ -70,7 +89,7 @@ const Index = () => {
                       CORAZÓN CENIZA
                     </h3>
 
-                    <div className="space-y-2 text-sm text-muted-foreground">
+                    <div className="space-y-2 text-sm text-white/80">
                       <p>1. CON TUS MALETAS</p>
                       <p>2. TR3S SEMANAS</p>
                       <p>3. CICATRICES</p>
