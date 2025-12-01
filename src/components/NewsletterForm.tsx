@@ -1,6 +1,7 @@
 import { useState, FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
 
 export const NewsletterForm = () => {
   const [formData, setFormData] = useState({
@@ -8,14 +9,34 @@ export const NewsletterForm = () => {
     name: '',
     country: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log('Newsletter Subscription:', formData);
-    toast.success('¡Gracias por suscribirte!', {
-      description: 'Te mantendremos al tanto de todas las novedades.',
-    });
-    setFormData({ email: '', name: '', country: '' });
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-newsletter-welcome', {
+        body: formData,
+      });
+
+      if (error) {
+        console.error('Error subscribing:', error);
+        toast.error(error.message || 'Error al procesar la suscripción');
+        return;
+      }
+
+      console.log('Newsletter subscription successful:', data);
+      toast.success('¡Gracias por suscribirte!', {
+        description: 'Revisa tu correo para confirmar tu suscripción.',
+      });
+      setFormData({ email: '', name: '', country: '' });
+    } catch (error: any) {
+      console.error('Error in newsletter submission:', error);
+      toast.error('Error de conexión. Por favor, intenta de nuevo.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -61,9 +82,10 @@ export const NewsletterForm = () => {
       <Button
         type="submit"
         variant="outline"
-        className="w-full border-2 border-primary bg-transparent py-6 text-sm font-bold tracking-widest text-primary transition-all hover:bg-primary hover:text-background sm:w-auto sm:px-12"
+        disabled={isSubmitting}
+        className="w-full border-2 border-primary bg-transparent py-6 text-sm font-bold tracking-widest text-primary transition-all hover:bg-primary hover:text-background disabled:opacity-50 disabled:cursor-not-allowed sm:w-auto sm:px-12"
       >
-        SUSCRÍBETE
+        {isSubmitting ? 'ENVIANDO...' : 'SUSCRÍBETE'}
       </Button>
     </form>
   );
