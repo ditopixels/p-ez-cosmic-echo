@@ -112,7 +112,7 @@ const Index = () => {
       </section>
 
       {/* Música Section */}
-      <section id="musica" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always">
+      <section id="musica" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always flex flex-col justify-center">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
             <h2 className="mb-8 font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">
@@ -153,7 +153,7 @@ const Index = () => {
       </section>
 
       {/* Videos Section */}
-      <section id="videos" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always">
+      <section id="videos" className="relative lg:min-h-screen py-20 lg:py-32 snap-start snap-always flex flex-col justify-center">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
             <h2 className="mb-8 font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">
@@ -178,7 +178,7 @@ const Index = () => {
       </section>
 
       {/* Fotos Section */}
-      <section id="fotos" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always">
+      <section id="fotos" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always flex flex-col justify-center">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
             <h2 className="mb-8 font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">
@@ -208,7 +208,7 @@ const Index = () => {
       </section>
 
       {/* Bio Section */}
-      <section id="bio" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always">
+      <section id="bio" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always flex flex-col justify-center">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
             {/* Image */}
@@ -260,7 +260,7 @@ const Index = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section id="newsletter" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always">
+      <section id="newsletter" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always flex flex-col justify-center">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mx-auto max-w-4xl space-y-8 text-center">
             <h2 className="font-display text-5xl font-black tracking-[0.15em] text-primary lg:text-6xl">
