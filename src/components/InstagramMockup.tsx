@@ -2,15 +2,15 @@ import { Heart, MessageCircle, Send, Bookmark } from 'lucide-react';
 import igPost from '@/assets/ig-post.jpg';
 
 const instagramPhotos = [
-  'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1520256409361-fa4f074c1d5e?w=400&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=400&fit=crop',
+  'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=250&h=250&fit=crop',
+  'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=250&h=250&fit=crop',
+  'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=250&h=250&fit=crop',
+  'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=250&h=250&fit=crop',
+  'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=250&h=250&fit=crop',
+  'https://images.unsplash.com/photo-1520256409361-fa4f074c1d5e?w=250&h=250&fit=crop',
+  'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=250&h=250&fit=crop',
+  'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=250&h=250&fit=crop',
+  'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=250&h=250&fit=crop',
 ];
 
 export const InstagramMockup = () => {

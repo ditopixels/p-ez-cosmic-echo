@@ -5,35 +5,35 @@ import { InstagramMockup } from '@/components/InstagramMockup';
 import { NewsletterForm } from '@/components/NewsletterForm';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, Download, ArrowRight, Instagram } from 'lucide-react';
-import artistPortrait from '@/assets/artist-portrait.jpg';
 import albumCover from '@/assets/album-cover.jpg';
 import bioPhoto from '@/assets/bio-photo.jpg';
+import bgHero from '@/assets/bh-hero.mp4';
+import artistPortrait from '@/assets/poster.jpg';
 
 const Index = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
   return (
-    <div className="min-h-screen scroll-smooth snap-y snap-mandatory overflow-y-scroll">
+    <div className="h-screen w-full overflow-y-scroll scroll-smooth snap-y snap-mandatory">
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen overflow-hidden pt-16 snap-start snap-always">
+      <section id="hero" className="relative min-h-screen w-full overflow-hidden pt-16 snap-start snap-always">
         {/* Video Background */}
         <video
           id="hero-video"
           autoPlay
-          loop
           muted
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
           poster={artistPortrait}
         >
-          <source src="https://cdn.coverr.co/videos/coverr-silhouette-of-a-person-on-a-desert-6545/1080p.mp4" type="video/mp4" />
+          <source src={bgHero} type="video/mp4" />
         </video>
         
         {/* Dark overlay for better text readability */}
@@ -51,7 +51,7 @@ const Index = () => {
                 : '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M17.5 6a8 8 0 0 1 0 12"/></svg>';
             }
           }}
-          className="absolute top-24 right-4 lg:right-8 z-10 p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all hover:scale-110"
+          className="absolute top-24 right-4 lg:right-8 p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all hover:scale-110 z-[999]"
           aria-label="Toggle mute"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/></svg>
@@ -112,7 +112,7 @@ const Index = () => {
       </section>
 
       {/* Música Section */}
-      <section id="musica" className="relative py-20 lg:py-32 snap-start">
+      <section id="musica" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
             <h2 className="mb-8 font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">
@@ -153,7 +153,7 @@ const Index = () => {
       </section>
 
       {/* Videos Section */}
-      <section id="videos" className="relative py-20 lg:py-32 snap-start">
+      <section id="videos" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
             <h2 className="mb-8 font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">
@@ -178,7 +178,7 @@ const Index = () => {
       </section>
 
       {/* Fotos Section */}
-      <section id="fotos" className="relative py-20 lg:py-32 snap-start">
+      <section id="fotos" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
             <h2 className="mb-8 font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">
@@ -208,7 +208,7 @@ const Index = () => {
       </section>
 
       {/* Bio Section */}
-      <section id="bio" className="relative py-20 lg:py-32 snap-start">
+      <section id="bio" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
             {/* Image */}
@@ -260,7 +260,7 @@ const Index = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section id="newsletter" className="relative py-20 lg:py-32 snap-start">
+      <section id="newsletter" className="relative min-h-screen py-20 lg:py-32 snap-start snap-always">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mx-auto max-w-4xl space-y-8 text-center">
             <h2 className="font-display text-5xl font-black tracking-[0.15em] text-primary lg:text-6xl">
@@ -286,7 +286,7 @@ const Index = () => {
       </section>
 
       {/* Contact/Footer Section */}
-      <section id="contacto" className="relative border-t border-border/50 py-20 lg:py-32 snap-start">
+      <section id="contacto" className="relative border-t border-border/50 py-20 lg:py-32 snap-start snap-always">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
             <h2 className="font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">

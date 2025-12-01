@@ -1,5 +1,5 @@
 import { Play, Volume2, Settings } from 'lucide-react';
-import videoThumbnail from '@/assets/video-thumbnail.jpg';
+import videoThumbnail from '@/assets/postervideo.jpg';
 
 export const VideoPlayer = () => {
   return (
@@ -17,7 +17,7 @@ export const VideoPlayer = () => {
         <div className="absolute inset-0 flex items-center justify-center bg-black/40 transition-all group-hover:bg-black/50">
           <button
             className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-primary bg-background/10 backdrop-blur-sm transition-all hover:scale-110 hover:border-primary/80 hover:bg-primary/20"
-            onClick={() => window.open('https://www.youtube.com', '_blank')}
+            onClick={() => window.open('https://www.youtube.com/watch?v=4tchniGGPAg', '_blank')}
             aria-label="Play video"
           >
             <Play className="h-8 w-8 fill-primary text-primary" />

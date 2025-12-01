@@ -8,7 +8,7 @@ export const Header = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setMobileMenuOpen(false);
     }
   };
@@ -27,7 +27,7 @@ export const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => scrollToSection('hero')}
             className="text-2xl font-black tracking-widest text-primary transition-all hover:scale-105 hover:text-primary/80"
           >
             PÁEZ
@@ -100,7 +100,7 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="border-t border-border/50 py-4 lg:hidden">
+          <div className="border-t border-border/50 py-4 lg:hidden animate-in slide-in-from-top-5 fade-in duration-300">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <button
