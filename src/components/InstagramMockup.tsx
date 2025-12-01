@@ -1,4 +1,5 @@
 import { Heart, MessageCircle, Send, Bookmark } from 'lucide-react';
+import igPost from '@/assets/ig-post.jpg';
 
 const instagramPhotos = [
   'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=400&fit=crop',
@@ -24,7 +25,7 @@ export const InstagramMockup = () => {
             <div className="flex items-center gap-3 border-b border-border/50 p-3">
               <div className="h-10 w-10 rounded-full bg-gradient-to-br from-primary to-primary/50"></div>
               <div className="flex-1">
-                <p className="text-sm font-semibold">paez_of</p>
+                <p className="text-sm font-semibold">paez.of</p>
                 <p className="text-xs text-muted-foreground">Music Artist</p>
               </div>
             </div>
@@ -32,7 +33,7 @@ export const InstagramMockup = () => {
             {/* Image */}
             <div className="aspect-square w-full bg-muted">
               <img
-                src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=800&fit=crop"
+                src={igPost}
                 alt="PÁEZ Instagram Post"
                 className="h-full w-full object-cover"
                 loading="lazy"
@@ -53,7 +54,7 @@ export const InstagramMockup = () => {
                 <span className="font-semibold">2,847 likes</span>
               </p>
               <p className="text-xs">
-                <span className="font-semibold">paez_of</span> Nueva música próximamente...
+                <span className="font-semibold">paez.of</span> Nueva música próximamente...
                 🔥
               </p>
             </div>

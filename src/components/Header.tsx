@@ -50,7 +50,7 @@ export const Header = () => {
           <div className="flex items-center gap-4">
             <div className="hidden items-center gap-3 md:flex">
               <a
-                href="https://open.spotify.com"
+                href="https://open.spotify.com/intl-es/artist/2bUSj1voRALClpYNwVQBLT?si=cLOFBEkqRRSQ2j-iCpLjFw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all hover:scale-110 hover:text-primary"
@@ -59,7 +59,7 @@ export const Header = () => {
                 <Music className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com/paez_of"
+                href="https://instagram.com/paez.of"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all hover:scale-110 hover:text-primary"
@@ -68,7 +68,7 @@ export const Header = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@paezof"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all hover:scale-110 hover:text-primary"

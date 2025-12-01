@@ -118,9 +118,9 @@ const Index = () => {
               <div className="w-full max-w-md">
                 <iframe 
                   style={{ borderRadius: '12px' }}
-                  src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0" 
+                  src="https://open.spotify.com/embed/album/6UPeS2j512xRVCe3RpiLHu?utm_source=generator&theme=0" 
                   width="100%" 
-                  height="352" 
+                  height="370" 
                   frameBorder="0" 
                   allowFullScreen 
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
@@ -175,13 +175,13 @@ const Index = () => {
               SIGUE A PÁEZ EN INSTAGRAM
             </p>
             <a
-              href="https://instagram.com/paez_of"
+              href="https://instagram.com/paez.of"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 text-lg font-semibold text-primary transition-all hover:gap-4"
             >
               <Instagram className="h-6 w-6" />
-              <span>@PAEZ_OF</span>
+              <span>@PAEZ.OF</span>
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
