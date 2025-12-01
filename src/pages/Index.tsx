@@ -18,11 +18,11 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen scroll-smooth">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden pt-16">
+      <section id="hero" className="relative min-h-screen overflow-hidden pt-16 snap-start snap-always">
         <div className="container mx-auto px-4 py-12 lg:px-8 lg:py-20">
           <div className="grid gap-8 lg:grid-cols-3 lg:gap-12">
             {/* Left Column - Poetic Text */}
@@ -54,7 +54,7 @@ const Index = () => {
             {/* Right Column - New Release */}
             <div className="flex items-start justify-center lg:justify-start">
               <div className="w-full max-w-sm space-y-6">
-                <h2 className="text-xl font-bold tracking-widest text-primary">
+                <h2 className="text-xl font-bold tracking-[0.15em] text-primary font-display">
                   NUEVO LANZAMIENTO
                 </h2>
 
@@ -66,7 +66,7 @@ const Index = () => {
                   />
 
                   <div className="space-y-4">
-                    <h3 className="text-2xl font-black tracking-widest text-primary">
+                    <h3 className="font-display text-2xl font-black tracking-[0.15em] text-primary">
                       CORAZÓN CENIZA
                     </h3>
 
@@ -93,10 +93,10 @@ const Index = () => {
       </section>
 
       {/* Música Section */}
-      <section id="musica" className="relative py-20 lg:py-32">
+      <section id="musica" className="relative py-20 lg:py-32 snap-start">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
-            <h2 className="mb-8 text-4xl font-black tracking-widest text-primary lg:text-6xl">
+            <h2 className="mb-8 font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">
               MÚSICA
             </h2>
           </div>
@@ -104,7 +104,7 @@ const Index = () => {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
             {/* Description */}
             <div className="flex flex-col justify-center space-y-6">
-              <h3 className="text-2xl font-bold tracking-wide text-foreground lg:text-3xl">
+              <h3 className="font-display text-3xl font-bold tracking-wide text-foreground lg:text-4xl">
                 ESCUCHA CORAZÓN CENIZA, EL NUEVO EP DE PÁEZ
               </h3>
               <p className="text-lg leading-relaxed text-muted-foreground">
@@ -113,19 +113,31 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Music Player */}
+            {/* Spotify Player */}
             <div className="flex items-center justify-center lg:justify-end">
-              <MusicPlayer />
+              <div className="w-full max-w-md">
+                <iframe 
+                  style={{ borderRadius: '12px' }}
+                  src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0" 
+                  width="100%" 
+                  height="352" 
+                  frameBorder="0" 
+                  allowFullScreen 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                  title="PÁEZ - Corazón Ceniza en Spotify"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Videos Section */}
-      <section id="videos" className="relative py-20 lg:py-32">
+      <section id="videos" className="relative py-20 lg:py-32 snap-start">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
-            <h2 className="mb-8 text-4xl font-black tracking-widest text-primary lg:text-6xl">
+            <h2 className="mb-8 font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">
               VIDEOS
             </h2>
           </div>
@@ -133,7 +145,7 @@ const Index = () => {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
             {/* Video Title */}
             <div>
-              <h3 className="text-5xl font-black tracking-widest text-foreground lg:text-7xl">
+              <h3 className="font-display text-6xl font-black tracking-[0.15em] text-foreground lg:text-8xl">
                 CON TUS MALETAS
               </h3>
             </div>
@@ -147,10 +159,10 @@ const Index = () => {
       </section>
 
       {/* Fotos Section */}
-      <section id="fotos" className="relative py-20 lg:py-32">
+      <section id="fotos" className="relative py-20 lg:py-32 snap-start">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
-            <h2 className="mb-8 text-4xl font-black tracking-widest text-primary lg:text-6xl">
+            <h2 className="mb-8 font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">
               FOTOS
             </h2>
           </div>
@@ -177,7 +189,7 @@ const Index = () => {
       </section>
 
       {/* Bio Section */}
-      <section id="bio" className="relative py-20 lg:py-32">
+      <section id="bio" className="relative py-20 lg:py-32 snap-start">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
             {/* Image */}
@@ -192,7 +204,7 @@ const Index = () => {
 
             {/* Bio Content */}
             <div className="flex flex-col justify-center space-y-6">
-              <h2 className="text-4xl font-black tracking-widest text-primary lg:text-5xl">
+              <h2 className="font-display text-5xl font-black tracking-[0.15em] text-primary lg:text-6xl">
                 ¿QUIÉN ES PÁEZ?
               </h2>
 
@@ -229,10 +241,10 @@ const Index = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section id="newsletter" className="relative py-20 lg:py-32">
+      <section id="newsletter" className="relative py-20 lg:py-32 snap-start">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mx-auto max-w-4xl space-y-8 text-center">
-            <h2 className="text-4xl font-black tracking-widest text-primary lg:text-5xl">
+            <h2 className="font-display text-5xl font-black tracking-[0.15em] text-primary lg:text-6xl">
               HOLA, SOY PÁEZ
             </h2>
 
@@ -255,10 +267,10 @@ const Index = () => {
       </section>
 
       {/* Contact/Footer Section */}
-      <section id="contacto" className="relative border-t border-border/50 py-20 lg:py-32">
+      <section id="contacto" className="relative border-t border-border/50 py-20 lg:py-32 snap-start">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-4xl font-black tracking-widest text-primary lg:text-6xl">
+            <h2 className="font-display text-5xl font-black tracking-[0.2em] text-primary lg:text-7xl">
               CONTACTO
             </h2>
           </div>
@@ -266,7 +278,7 @@ const Index = () => {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
             {/* Logo */}
             <div className="flex items-center">
-              <h3 className="text-6xl font-black tracking-widest text-primary lg:text-8xl">
+              <h3 className="font-display text-7xl font-black tracking-[0.2em] text-primary lg:text-9xl">
                 PÁEZ
               </h3>
             </div>
@@ -312,7 +324,7 @@ const Index = () => {
           {/* Copyright */}
           <div className="mt-20 border-t border-border/50 pt-8 text-center">
             <p className="text-sm text-muted-foreground">
-              © 2024 PÁEZ. Todos los derechos reservados.
+              © {new Date().getFullYear()} PÁEZ. Todos los derechos reservados.
             </p>
           </div>
         </div>

@@ -57,7 +57,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Bebas Neue', 'Impact', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
