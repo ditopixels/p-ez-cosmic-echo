@@ -71,3 +71,13 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+---
+
+## Rediseño COMPATIBLES (nov 2026)
+
+La home ahora es una página estática en `index.html` (HTML + CSS + un poco de JS, sin React), con sus archivos en `public/img`, `public/fonts` y `public/audio`. `npm run build` y `npm run deploy` siguen funcionando igual.
+
+- Datos del lanzamiento: bloque `SITIO` al inicio del `<script>` en `index.html` (pre-save, fecha, EPK, comunicado). El formulario de cartas usa la misma función de Supabase de antes (`send-newsletter-welcome`) con las variables `VITE_SUPABASE_*` del `.env`.
+- Sistema visual: `DESIGN.md`.
+- El código React anterior (`src/`) ya no se usa en la home; se puede borrar cuando se confirme el cambio.

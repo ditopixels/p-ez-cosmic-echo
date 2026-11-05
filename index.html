@@ -1,39 +1,599 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PÁEZ - Cantautor, Compositor & Productor Colombiano | Corazón Ceniza</title>
-    <meta name="description" content="PÁEZ - Artista colombiano de Pop-Latino. Escucha Corazón Ceniza, el nuevo EP que nos sumerge en el universo del desamor, del recuerdo, del dolor y del olvido." />
-    <meta name="author" content="PÁEZ" />
-    <meta name="keywords" content="PÁEZ, Andrés Páez, música colombiana, pop latino, Corazón Ceniza, cantautor colombiano, Con Tus Maletas" />
-    <link rel="canonical" href="https://soypaez.com" />
-    <link rel="icon" type="image/jpg" href="https://soypaez.com/favicon.jpg" />
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="PÁEZ · COMPATIBLES">
+<meta property="og:description" content="el primer adelanto de todo está bien.">
+<meta property="og:image" content="https://soypaez.com/img/og-compatibles.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B2288">
+<link rel="icon" type="image/png" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/icono.png">
+<title>PÁEZ · COMPATIBLES</title>
+<meta name="description" content="COMPATIBLES, el nuevo single de PÁEZ y el primer adelanto de su disco todo está bien. Escucha un adelanto, lee la letra y quédate cerca.">
+<style>
+/* Layout: the record opened once — sleeve (dark band), booklet spread on one gutter (paper band), the album as a horizon, earlier records, the man, letters, back cover. */
+@font-face{font-family:"Instrument Serif";src:url(/fonts/instrument-serif-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(/fonts/instrument-serif-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url(/fonts/cormorant-garamond-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url(/fonts/cormorant-garamond-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Anton";src:url(/fonts/anton-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Inter";src:url(/fonts/inter-latin-300-normal.woff2) format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"Inter";src:url(/fonts/inter-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Inter";src:url(/fonts/inter-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://soypaez.com" />
-    <meta property="og:title" content="PÁEZ - Cantautor Colombiano | Corazón Ceniza" />
-    <meta property="og:description" content="Escucha el nuevo EP de PÁEZ. Pop-Latino con alma, rescatando los valores románticos perdidos." />
-    <meta property="og:image" content="https://soypaez.com/og-image.jpg" />
+:root{
+  color-scheme:dark;
+  /* archivo azul */
+  --negro:#030C3A; --marino:#0B2288; --noche:#04155E; --hora:#1F3C94; --petroleo:#1F3C94;
+  --denim:#6174B2; --roto:#E6E2D6; --niebla:#C3C7E2; --piedra:#A9B0D6;
+  /* booklet paper, tinted from the blue */
+  --papel:#E6E2D6; --papel-sombra:#CBC5B3; --tinta:#0B2288; --tinta-suave:#2E3F8F; --tinta-tenue:#4D5A99;
+  --ceniza:#2A2522; --ceniza-tinta:#D9CFC6;
+  --cartel:"Anton","Impact","Arial Narrow",sans-serif;
+  --display:"Instrument Serif","Iowan Old Style","Times New Roman",serif;
+  --letra:"Cormorant Garamond","Garamond","Georgia",serif;
+  --util:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:max(16px,env(safe-area-inset-left,0px));
+  --gutter-r:max(16px,env(safe-area-inset-right,0px));
+  --band:clamp(88px,13vh,168px);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--negro)}
+body{margin:0;background:var(--noche);color:var(--roto);font:400 17px/1.6 var(--util);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--marino)}
+/* fine grain over everything */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;opacity:.1;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:var(--hora);color:var(--roto)}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.22em}
+:focus-visible{outline:1.5px solid var(--roto);outline-offset:4px}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://soypaez.com" />
-    <meta name="twitter:title" content="PÁEZ - Cantautor Colombiano | Corazón Ceniza" />
-    <meta name="twitter:description" content="Escucha el nuevo EP de PÁEZ. Pop-Latino con alma." />
-    <meta name="twitter:image" content="https://soypaez.com/og-image.jpg" />
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  </head>
+/* ---------- header ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--marino) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in srgb,var(--roto) 8%,transparent)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap}
+.marca{font:300 13px/1 var(--util);letter-spacing:.42em;text-decoration:none;padding:16px 0;margin-right:-.42em}
+.top nav ul{display:flex;gap:clamp(12px,2.4vw,32px);list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.top nav a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;color:var(--niebla);text-decoration:none;transition:color .3s}
+.top nav a:hover,.top nav a[aria-current="true"]{color:var(--roto)}
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+/* ---------- 1 · sleeve ---------- */
+.funda{background:var(--marino)}
+.funda .wrap{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center;padding-block:clamp(40px,7vh,88px) clamp(56px,9vh,112px)}
+.portada{margin:0;position:relative;aspect-ratio:1;max-width:min(78vh,620px);width:100%;justify-self:end;
+  box-shadow:0 44px 80px -28px rgba(0,0,0,.55),0 14px 26px -12px rgba(0,0,0,.4)}
+.portada img{width:100%;height:100%;object-fit:cover;animation:revela 1.8s var(--ease) both}
+@keyframes revela{from{filter:blur(8px) brightness(.8);transform:scale(1.025)}to{filter:none;transform:none}}
+
+.dorso{display:grid;gap:28px;max-width:470px;min-width:0}
+.dorso h1{margin:0;font:400 clamp(48px,6.4vw,92px)/.95 var(--cartel);letter-spacing:.012em;color:var(--roto)}
+.dorso .firma{margin:-12px 0 0;font:italic 400 clamp(20px,2vw,24px)/1.3 var(--letra);color:var(--niebla)}
+.dorso blockquote{margin:0;font:400 clamp(21px,2.1vw,26px)/1.38 var(--letra);color:var(--roto);text-wrap:pretty}
+.dorso blockquote cite{display:block;margin-top:10px;font:400 13px/1.4 var(--util);font-style:normal;color:var(--piedra)}
+
+.reproductor{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:center;padding:20px 0;border-top:1px solid color-mix(in srgb,var(--roto) 16%,transparent);border-bottom:1px solid color-mix(in srgb,var(--roto) 16%,transparent)}
+.play{grid-row:span 2;width:60px;height:60px;border-radius:50%;border:1px solid var(--roto);background:transparent;color:var(--roto);display:grid;place-items:center;cursor:pointer;transition:background .4s var(--ease),color .4s var(--ease)}
+.play:hover{background:var(--roto);color:var(--marino)}
+.play svg{width:18px;height:18px}
+.play .i-pausa{display:none}
+.sonando .play .i-play{display:none}.sonando .play .i-pausa{display:block}
+.reproductor .que{display:flex;justify-content:space-between;gap:12px;font-size:15px}
+.reproductor .que span:last-child{color:var(--niebla);font-variant-numeric:tabular-nums}
+.barra{position:relative;height:18px;cursor:pointer;touch-action:none}
+.barra::before,.barra i{content:"";position:absolute;left:0;top:50%;height:1px;transform:translateY(-50%)}
+.barra::before{right:0;background:color-mix(in srgb,var(--roto) 22%,transparent)}
+.barra i{width:0;background:var(--roto);height:2px}
+.reproductor .ahora{grid-column:1/-1;min-height:1.4em;margin:6px 0 0;font:italic 400 19px/1.4 var(--letra);color:var(--niebla);transition:opacity .4s}
+
+.acciones{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;background:var(--roto);color:var(--marino);font:500 15px/1 var(--util);text-decoration:none;border:0;cursor:pointer;transition:background .3s,transform .3s var(--ease)}
+.btn:hover{background:#fff;transform:translateY(-1px)}
+.btn:disabled{opacity:.5;cursor:progress;transform:none}
+.enlace{display:inline-flex;align-items:center;min-height:44px;font-size:15px;color:var(--niebla)}
+.enlace:hover{color:var(--roto)}
+.ficha{display:grid;grid-template-columns:auto 1fr;gap:6px 20px;margin:0;font-size:13px;color:var(--piedra)}
+.ficha dt{color:var(--niebla)}
+.ficha dd{margin:0}
+
+/* ---------- 2 · booklet ---------- */
+.librillo{background:linear-gradient(var(--noche),var(--negro));padding-block:var(--band)}
+.pliego{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);background:var(--papel);color:var(--tinta);
+  box-shadow:0 50px 90px -40px rgba(0,0,0,.8);max-width:1240px;margin:0 auto}
+.pliego::after{content:"";position:absolute;top:0;bottom:0;left:58.333%;width:56px;transform:translateX(-50%);pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(11,34,136,.08) 42%,rgba(11,34,136,.20) 50%,rgba(11,34,136,.08) 58%,transparent)}
+.pagina{padding:clamp(40px,6vw,88px) clamp(28px,5vw,80px);min-width:0}
+.pagina h2{margin:0 0 32px;font:italic 400 clamp(34px,3.6vw,48px)/1 var(--display);color:var(--tinta)}
+.pie-pagina{margin-top:40px;font:400 12px/1 var(--util);color:var(--tinta-tenue);letter-spacing:.04em}
+.letra{columns:2;column-gap:48px;font:400 clamp(18px,1.5vw,21px)/1.42 var(--letra)}
+.estrofa{break-inside:avoid;margin:0 0 1.2em}
+.estrofa.coro{padding-left:14px;border-left:1px solid var(--papel-sombra)}
+.estrofa .rot{display:block;font:400 11px/1 var(--util);letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-tenue);margin-bottom:8px}
+.verso{display:block;transition:color .5s var(--ease),opacity .5s var(--ease)}
+.sonando .letra .verso{color:var(--tinta-tenue)}
+.sonando .letra .verso.ya{color:var(--tinta-suave)}
+.sonando .letra .verso.ahora{color:var(--tinta)}
+.verso.ahora{background:linear-gradient(transparent 62%,rgba(11,34,136,.16) 62%);font-weight:500}
+.pliego :focus-visible{outline-color:var(--tinta)}
+
+.notas{font:400 clamp(19px,1.6vw,22px)/1.5 var(--letra);color:var(--tinta);max-width:34em}
+.notas p{margin:0 0 .9em}
+.notas .cierre{font-style:italic}
+.notas .de{font:italic 400 28px/1 var(--display);margin-top:20px}
+.manos{margin:40px 0 0;display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:20px;align-items:end}
+.manos img{aspect-ratio:9/11;object-fit:cover;width:100%;height:auto}
+.manos figcaption{font:italic 400 19px/1.35 var(--letra);color:var(--tinta-suave)}
+.manos figcaption small{display:block;margin-top:8px;font:400 12px/1.4 var(--util);font-style:normal;color:var(--tinta-tenue)}
+
+/* ---------- 3 · the album ---------- */
+.disco{position:relative;min-height:clamp(520px,82vh,860px);display:grid;align-items:end;overflow:hidden;background:var(--negro)}
+.disco>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.disco::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--negro) 0%,transparent 28%,transparent 46%,rgba(3,12,58,.9) 100%)}
+.disco .wrap{position:relative;width:100%;padding-block:var(--band)}
+.disco h2{margin:0;font:400 clamp(60px,11vw,152px)/.9 var(--display);letter-spacing:-.01em;max-width:9ch}
+.disco p{max-width:34ch;margin:24px 0 0;font:400 clamp(20px,1.9vw,24px)/1.45 var(--letra);color:var(--roto)}
+.disco .pronto{font:400 14px/1.5 var(--util);color:var(--niebla);margin-top:14px}
+.disco .credito{position:absolute;right:var(--gutter-r);bottom:24px;margin:0;font:400 12px/1 var(--util);color:var(--piedra)}
+
+/* ---------- 4 · earlier records ---------- */
+.banda{padding-block:var(--band)}
+.antes{background:var(--negro)}
+.antes .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:center}
+.antes h2,.quien h2,.cartas h2{margin:0 0 20px;font:400 clamp(40px,4.6vw,64px)/1 var(--display);text-wrap:balance}
+.antes p,.quien p{margin:0 0 1em;max-width:58ch;color:var(--niebla)}
+.ep{margin:0;max-width:420px}
+.ep img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
+.ep ol{margin:18px 0 0;padding:0;list-style:none;font:400 14px/2.2 var(--util);color:var(--niebla)}
+.ep ol li{display:flex;justify-content:space-between;border-top:1px solid color-mix(in srgb,var(--roto) 14%,transparent)}
+.ep ol span{font-variant-numeric:tabular-nums}
+.lista-enlaces{display:flex;flex-wrap:wrap;gap:4px 28px;margin-top:8px;padding:0;list-style:none}
+
+/* ---------- 5 · who ---------- */
+.quien{background:var(--noche)}
+.quien .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.quien figure{margin:0}
+.quien img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.quien figcaption{margin-top:12px;font:400 12px/1.4 var(--util);color:var(--piedra)}
+.quien .grande{font:400 clamp(22px,2.2vw,28px)/1.4 var(--letra);color:var(--roto);max-width:30ch}
+
+/* ---------- 6 · letters ---------- */
+.cartas{background:var(--papel);color:var(--tinta)}
+.cartas .btn{background:var(--tinta);color:var(--papel)}
+.cartas .btn:hover{background:var(--hora)}
+.cartas :focus-visible{outline-color:var(--tinta)}
+.cartas .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.cartas .carta{font:400 clamp(20px,1.8vw,23px)/1.5 var(--letra);max-width:32em}
+.cartas .carta p{margin:0 0 .9em}
+form{display:grid;gap:22px;padding-top:8px}
+.campo{display:grid;gap:6px}
+.campo label{font-size:13px;color:var(--tinta-suave)}
+.campo input{font:400 18px/1.3 var(--util);color:var(--tinta);background:transparent;border:0;border-bottom:1px solid var(--tinta-tenue);padding:10px 0;min-height:48px;border-radius:0}
+.campo input:focus{outline:none;border-bottom-color:var(--tinta);box-shadow:0 1px 0 var(--tinta)}
+.campo input::placeholder{color:var(--tinta-tenue)}
+.aviso{min-height:1.5em;margin:0;font-size:14px;color:var(--tinta-suave)}
+.aviso.error{color:#9B1C2E}
+
+/* ---------- 7 · back cover ---------- */
+.contra{background:var(--negro);padding-block:var(--band) 48px}
+.contra .wrap{display:grid;gap:64px}
+.contra .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.contra h2{margin:0;font:400 clamp(40px,4.6vw,64px)/1 var(--display)}
+.contra h3{margin:0 0 14px;font:400 13px/1 var(--util);color:var(--piedra);letter-spacing:.04em}
+.contra ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.contra li a,.contra li span{display:inline-flex;align-items:center;min-height:40px}
+.contra .dato{font:400 20px/1.3 var(--letra);user-select:all}
+.pendiente{color:var(--piedra)}
+.pendiente em{font-style:normal;font-size:12px;border:1px solid color-mix(in srgb,var(--piedra) 50%,transparent);padding:2px 8px;margin-left:10px}
+.colofon{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;border-top:1px solid color-mix(in srgb,var(--roto) 10%,transparent);font-size:12px;color:var(--piedra)}
+.colofon .ancho{font:300 12px/1 var(--util);letter-spacing:.42em}
+
+/* ---------- now playing ---------- */
+.mini{position:fixed;left:0;right:0;bottom:0;z-index:25;transform:translateY(110%);transition:transform .6s var(--ease);
+  background:color-mix(in srgb,var(--negro) 92%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid color-mix(in srgb,var(--roto) 10%,transparent);
+  padding:10px var(--gutter-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gutter)}
+.mini.visible{transform:none}
+.mini .wrap{display:flex;align-items:center;gap:16px;padding:0}
+.mini .play{width:44px;height:44px}
+.mini p{margin:0;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:italic 400 19px/1.3 var(--letra)}
+.mini small{display:block;font:400 12px/1.2 var(--util);font-style:normal;color:var(--piedra)}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .funda .wrap,.antes .wrap,.quien .wrap,.cartas .wrap{grid-template-columns:1fr}
+  .portada{justify-self:stretch;max-width:none}
+  .dorso{max-width:none}
+  .pliego{grid-template-columns:1fr}
+  .pliego::after{left:0;right:0;top:auto;bottom:auto;width:auto;height:48px;transform:none;top:var(--pliegue,50%);
+    background:linear-gradient(180deg,transparent,rgba(20,35,58,.12) 50%,transparent)}
+  .contra .cols{grid-template-columns:1fr}
+}
+@media (max-width:900px){.pliego::after{display:none}.pagina+.pagina{border-top:1px solid var(--papel-sombra)}}
+@media (max-width:560px){
+  .top .wrap{padding-block:4px}
+  .top nav ul{gap:14px}
+  .letra{columns:1}
+  .funda .wrap{padding-top:20px;gap:44px}
+  .manos{grid-template-columns:1fr 1fr}
+  .librillo{padding-inline:0}
+  .pliego{box-shadow:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marca" href="#inicio">PÁEZ</a>
+    <nav aria-label="secciones">
+      <ul>
+        <li><a href="#letra">letra</a></li>
+        <li><a href="#disco">el disco</a></li>
+        <li><a href="#quien">quién es</a></li>
+        <li><a href="#cartas">cartas</a></li>
+        <li><a href="#contacto">contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="funda" aria-labelledby="t-compatibles">
+    <div class="wrap">
+      <figure class="portada">
+        <img src="/img/compatibles-portada.jpg" width="1000" height="1000" fetchpriority="high" alt="portada de compatibles: una pareja abrazada frente al mar al atardecer, impresa en azul, con el título COMPATIBLES y la firma de páez">
+      </figure>
+
+      <div class="dorso" id="reproductor-principal">
+        <h1 id="t-compatibles">COMPATIBLES</h1>
+        <p class="firma">páez · el primer adelanto de todo está bien</p>
+        <blockquote>
+          a veces simplemente significa elegir quedarse, incluso cuando nadie más lo entiende.
+          <cite>páez, sobre la canción</cite>
+        </blockquote>
+
+        <div class="reproductor" data-reproductor>
+          <button class="play" type="button" aria-label="escuchar el adelanto de compatibles" data-play>
+            <svg class="i-play" viewBox="0 0 18 18" aria-hidden="true"><path d="M5 3.2v11.6L14.6 9z" fill="currentColor"/></svg>
+            <svg class="i-pausa" viewBox="0 0 18 18" aria-hidden="true"><path d="M5 3h2.6v12H5zM10.4 3H13v12h-2.6z" fill="currentColor"/></svg>
+          </button>
+          <div class="que"><span>escucha un adelanto</span><span data-tiempo>0:00 / 0:34</span></div>
+          <div class="barra" data-barra role="slider" tabindex="0" aria-label="posición del adelanto" aria-valuemin="0" aria-valuemax="34" aria-valuenow="0"><i data-progreso></i></div>
+          <p class="ahora" data-ahora aria-live="polite">el coro, con la letra siguiéndote más abajo.</p>
+        </div>
+
+        <div class="acciones">
+          <a class="btn" href="#cartas" data-cta>avísame el día del estreno</a>
+          <a class="enlace" href="#letra">leer la letra</a>
+        </div>
+
+        <dl class="ficha">
+          <dt>formato</dt><dd>single</dd>
+          <dt>disco</dt><dd>todo está bien</dd>
+          <dt>estreno</dt><dd data-fecha>noviembre de 2026</dd>
+          <dt>desde</dt><dd>bogotá</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="letra" class="librillo" aria-label="librillo de compatibles">
+    <div class="wrap">
+      <div class="pliego">
+        <article class="pagina" aria-labelledby="t-letra">
+          <h2 id="t-letra">compatibles</h2>
+          <div class="letra">
+            <p class="estrofa">
+              <span class="verso">dicen que no te busque,</span>
+              <span class="verso">que somos diferentes,</span>
+              <span class="verso">que a ti no te interesa</span>
+              <span class="verso">por mucho que lo intente,</span>
+              <span class="verso">que estoy jugando un juego</span>
+              <span class="verso">en el que no hay manera de ganar</span>
+            </p>
+            <p class="estrofa">
+              <span class="verso">hablamos por un rato</span>
+              <span class="verso">y no pasaba el tiempo,</span>
+              <span class="verso">tú con tu vida armada,</span>
+              <span class="verso">yo libre como el viento</span>
+              <span class="verso" data-t="0.3" data-f="3.5">si un mundo equivocado</span>
+              <span class="verso" data-t="3.5" data-f="6.2">lo encuentro a tu lado,</span>
+              <span class="verso" data-t="6.2" data-f="9.1">qué más da</span>
+              <span class="verso" data-t="9.1" data-f="13.5">somos compatibles de verdad</span>
+            </p>
+            <p class="estrofa coro">
+              <span class="rot">coro</span>
+              <span class="verso" data-t="13.5" data-f="15.0">y dime,</span>
+              <span class="verso" data-t="15.0" data-f="19.0">¿por qué no vienes a romper</span>
+              <span class="verso" data-t="19.0" data-f="23.1">con los esquemas de mi vida?</span>
+              <span class="verso" data-t="23.1" data-f="24.9">si cuando estoy contigo</span>
+              <span class="verso" data-t="24.9" data-f="28.1">se me curan las heridas,</span>
+              <span class="verso" data-t="28.1" data-f="30.2">no me importa</span>
+              <span class="verso" data-t="30.2" data-f="33.8">lo que digan</span>
+              <span class="verso" data-t="33.8" data-f="35">sabes muy bien</span>
+              <span class="verso">que tus diferencias hacen juego</span>
+              <span class="verso">con las mías,</span>
+              <span class="verso">tú eres esa guerra</span>
+              <span class="verso">a la que cualquiera iría</span>
+              <span class="verso">sin saber cuándo</span>
+              <span class="verso">es la despedida</span>
+            </p>
+            <p class="estrofa">
+              <span class="verso">tú tienes tantas reglas</span>
+              <span class="verso">y yo quiero romperlas,</span>
+              <span class="verso">yo lleno de tatuajes,</span>
+              <span class="verso">tú con la piel perfecta</span>
+              <span class="verso">si tú eres un pecado</span>
+              <span class="verso">no quiero confesarme nunca más</span>
+            </p>
+            <p class="estrofa">
+              <span class="verso">quédate un poquito más,</span>
+              <span class="verso">muy cerca de mí</span>
+              <span class="verso">quédate un poquito más,</span>
+              <span class="verso">contigo soy feliz</span>
+            </p>
+          </div>
+          <p class="pie-pagina">letra y música: páez</p>
+        </article>
+
+        <article class="pagina" aria-labelledby="t-notas">
+          <h2 id="t-notas">dicen que los opuestos se atraen</h2>
+          <div class="notas">
+            <p>pero ¿qué pasa cuando todos creen que dos personas no deberían estar juntas? cuando no entienden qué ven el uno en el otro, cuando parecen venir de mundos diferentes, cuando nadie más entiende lo que pasa entre ellos.</p>
+            <p>quizá el amor nunca se trató de encontrar a alguien igual a ti. quizá se trata de encontrar a esa persona con la que puedes ser tú mismo, incluso cuando el resto del mundo no lo entiende.</p>
+            <p>porque ser compatibles no significa pensar igual, vivir igual o encajar en lo que los demás esperan.</p>
+            <p class="cierre">a veces simplemente significa elegir quedarse, incluso cuando nadie más lo entiende.</p>
+            <p class="de">páez</p>
+          </div>
+          <figure class="manos">
+            <img src="/img/manos-azul.jpg" width="900" height="1100" loading="lazy" alt="una mano tatuada sostiene una mano sin tatuajes">
+            <figcaption>tus diferencias hacen juego con las mías.<small>imagen de referencia</small></figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="disco" class="disco" aria-labelledby="t-disco">
+    <img src="/img/ciudad-azul.jpg" alt="" decoding="async">
+    <div class="wrap">
+      <h2 id="t-disco">todo está bien</h2>
+      <p>el disco llega en noviembre. compatibles es la primera canción que sale de él.</p>
+      <p class="pronto">el resto de canciones, pronto.</p>
+      <p class="credito">imagen de referencia</p>
+    </div>
+  </section>
+
+  <section id="antes" class="antes banda" aria-labelledby="t-antes">
+    <div class="wrap">
+      <figure class="ep">
+        <img src="/img/corazon-ceniza.jpg" width="640" height="640" loading="lazy" alt="portada de corazón ceniza">
+        <ol aria-label="canciones de corazón ceniza">
+          <li>con tus maletas <span>2:53</span></li>
+          <li>tr3s semanas <span>2:46</span></li>
+          <li>cicatrices <span>3:22</span></li>
+        </ol>
+      </figure>
+      <div>
+        <h2 id="t-antes">antes de esto, corazón ceniza</h2>
+        <p>tres canciones sobre el desamor, el recuerdo, el dolor y el olvido. el ep anterior de páez.</p>
+        <ul class="lista-enlaces">
+          <li><a class="enlace" href="https://open.spotify.com/album/6UPeS2j512xRVCe3RpiLHu" target="_blank" rel="noopener">escuchar en spotify</a></li>
+          <li><a class="enlace" href="https://www.youtube.com/watch?v=4tchniGGPAg" target="_blank" rel="noopener">ver el video de con tus maletas</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="quien" class="quien banda" aria-labelledby="t-quien">
+    <div class="wrap">
+      <figure>
+        <div><img src="/img/paez-bio-azul.jpg" width="541" height="541" decoding="async" alt="páez cantando en vivo, con los brazos tatuados"></div>
+        <figcaption>páez en vivo</figcaption>
+      </figure>
+      <div>
+        <h2 id="t-quien">quién es páez</h2>
+        <p class="grande">andrés páez escribe canciones para lo que muchas personas sienten y no encuentran cómo decir.</p>
+        <p>es cantautor, compositor y productor. nació en bogotá en 1990 y la música le viene de antes: de niño iba en las giras de su madre y de su abuelo por el país.</p>
+        <p>escribe desde el pop y deja que cada historia escoja su ritmo. después de corazón ceniza, ahora prepara todo está bien.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cartas" class="cartas banda" aria-labelledby="t-cartas">
+    <div class="wrap">
+      <div>
+        <h2 id="t-cartas">hola, soy páez</h2>
+        <div class="carta">
+          <p>si has conectado con mis canciones, te escribo de vez en cuando: lo que está pasando con este sueño, los procesos, y alguna historia personal que creo que te puede interesar.</p>
+          <p>nos vemos dentro.</p>
+        </div>
+      </div>
+      <form data-form novalidate>
+        <div class="campo">
+          <label for="f-correo">correo</label>
+          <input id="f-correo" name="correo" type="email" autocomplete="email" required placeholder="tu@correo.com">
+        </div>
+        <div class="campo">
+          <label for="f-nombre">nombre</label>
+          <input id="f-nombre" name="nombre" type="text" autocomplete="given-name" required>
+        </div>
+        <div class="campo">
+          <label for="f-pais">país</label>
+          <input id="f-pais" name="pais" type="text" autocomplete="country-name" required list="paises">
+          <datalist id="paises"><option value="Colombia"><option value="México"><option value="España"><option value="Estados Unidos"><option value="Argentina"><option value="Chile"><option value="Perú"><option value="Ecuador"><option value="Venezuela"></datalist>
+        </div>
+        <div><button class="btn" type="submit">recibir las cartas</button></div>
+        <p class="aviso" data-aviso aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto" class="contra" aria-labelledby="t-contacto">
+  <div class="wrap">
+    <h2 id="t-contacto">contacto</h2>
+    <div class="cols">
+      <div>
+        <h3>management y booking</h3>
+        <ul>
+          <li><a class="dato" href="mailto:oficialpaez@gmail.com">oficialpaez@gmail.com</a></li>
+          <li><a class="dato" href="tel:+573152238194">+57 315 223 81 94</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>prensa</h3>
+        <ul>
+          <li data-doc="epk"><span class="pendiente">epk de compatibles <em>pronto</em></span></li>
+          <li data-doc="comunicado"><span class="pendiente">comunicado de prensa <em>pronto</em></span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>escucha y sigue</h3>
+        <ul>
+          <li><a href="https://instagram.com/paez.of" target="_blank" rel="noopener">instagram · @paez.of</a></li>
+          <li><a href="https://open.spotify.com/album/6UPeS2j512xRVCe3RpiLHu" target="_blank" rel="noopener">spotify</a></li>
+          <li><a href="https://www.youtube.com/watch?v=4tchniGGPAg" target="_blank" rel="noopener">youtube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colofon">
+      <span class="ancho">PÁEZ</span>
+      <span>© 2026 páez · hecho en bogotá</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mini" data-mini aria-hidden="true">
+  <div class="wrap">
+    <button class="play" type="button" aria-label="pausar el adelanto" data-play tabindex="-1">
+      <svg class="i-play" viewBox="0 0 18 18" aria-hidden="true"><path d="M5 3.2v11.6L14.6 9z" fill="currentColor"/></svg>
+      <svg class="i-pausa" viewBox="0 0 18 18" aria-hidden="true"><path d="M5 3h2.6v12H5zM10.4 3H13v12h-2.6z" fill="currentColor"/></svg>
+    </button>
+    <p><span data-mini-verso>compatibles</span><small>COMPATIBLES · adelanto</small></p>
+  </div>
+</div>
+
+<audio data-audio preload="none" src="/audio/compatibles-adelanto.mp3"></audio>
+
+<script>
+/* datos del lanzamiento: rellena y se actualiza todo el sitio */
+const SITIO = {
+  presave: '',        // enlace de pre-guardado o streaming de compatibles
+  fecha: '',          // p. ej. '21 de noviembre de 2026'
+  listaCorreo: '%VITE_SUPABASE_URL%/functions/v1/send-newsletter-welcome', // función de supabase que ya usaba el sitio
+  clave: '%VITE_SUPABASE_PUBLISHABLE_KEY%',
+  epk: '',            // url del pdf del epk
+  comunicado: ''      // url del pdf del comunicado
+};
+(() => {
+  if (SITIO.presave) { const c = document.querySelector('[data-cta]'); c.href = SITIO.presave; c.target = '_blank'; c.rel = 'noopener'; c.textContent = 'guardar compatibles'; }
+  if (SITIO.fecha) document.querySelector('[data-fecha]').textContent = SITIO.fecha;
+  if (SITIO.listaCorreo && !SITIO.listaCorreo.startsWith('%')) document.querySelector('[data-form]').dataset.endpoint = SITIO.listaCorreo;
+  [['epk','epk de compatibles'],['comunicado','comunicado de prensa']].forEach(([k, t]) => {
+    if (!SITIO[k]) return;
+    const li = document.querySelector('[data-doc="' + k + '"]');
+    li.innerHTML = ''; const a = document.createElement('a'); a.href = SITIO[k]; a.target = '_blank'; a.rel = 'noopener'; a.textContent = t + ' (pdf)'; li.append(a);
+  });
+})();
+(() => {
+  const audio = document.querySelector('[data-audio]');
+  const root = document.documentElement;
+  const plays = document.querySelectorAll('[data-play]');
+  const tiempo = document.querySelector('[data-tiempo]');
+  const prog = document.querySelector('[data-progreso]');
+  const barra = document.querySelector('[data-barra]');
+  const ahora = document.querySelector('[data-ahora]');
+  const mini = document.querySelector('[data-mini]');
+  const miniVerso = document.querySelector('[data-mini-verso]');
+  const versos = [...document.querySelectorAll('.verso[data-t]')].map(el => ({el, t:+el.dataset.t, f:+el.dataset.f}));
+  const DUR = 34.4;
+  const fmt = s => { s = Math.max(0, Math.floor(s)); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); };
+  let principalVisible = true, actual = null;
+
+  function pintar() {
+    const t = audio.currentTime || 0, d = audio.duration || DUR;
+    tiempo.textContent = fmt(t) + ' / ' + fmt(d);
+    prog.style.width = (t / d * 100) + '%';
+    barra.setAttribute('aria-valuenow', Math.round(t));
+    const v = versos.find(x => t >= x.t && t < x.f) || null;
+    if (v !== actual) {
+      versos.forEach(x => { x.el.classList.toggle('ahora', x === v); x.el.classList.toggle('ya', t >= x.f); });
+      actual = v;
+      const texto = v ? v.el.textContent.replace(/[,]$/, '') : '';
+      ahora.textContent = texto;
+      if (texto) miniVerso.textContent = texto;
+    }
+  }
+  function estado() {
+    const on = !audio.paused;
+    root.classList.toggle('sonando', on);
+    plays.forEach(b => b.setAttribute('aria-label', on ? 'pausar el adelanto' : 'escuchar el adelanto de compatibles'));
+    const mostrar = on && !principalVisible;
+    mini.classList.toggle('visible', mostrar);
+    mini.setAttribute('aria-hidden', String(!mostrar));
+    mini.querySelector('[data-play]').tabIndex = mostrar ? 0 : -1;
+  }
+  plays.forEach(b => b.addEventListener('click', () => {
+    if (audio.paused) { audio.play().catch(() => { ahora.textContent = 'no se pudo reproducir el adelanto. intenta de nuevo.'; }); }
+    else audio.pause();
+  }));
+  ['play','pause','ended'].forEach(e => audio.addEventListener(e, estado));
+  audio.addEventListener('ended', () => { audio.currentTime = 0; ahora.textContent = 'somos compatibles de verdad.'; versos.forEach(x => x.el.classList.remove('ahora','ya')); actual = null; });
+  audio.addEventListener('timeupdate', pintar);
+  audio.addEventListener('loadedmetadata', pintar);
+
+  function buscar(clientX) {
+    const r = barra.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, (clientX - r.left) / r.width));
+    audio.currentTime = p * (audio.duration || DUR); pintar();
+  }
+  barra.addEventListener('pointerdown', e => { buscar(e.clientX); barra.setPointerCapture(e.pointerId); });
+  barra.addEventListener('pointermove', e => { if (barra.hasPointerCapture(e.pointerId)) buscar(e.clientX); });
+  barra.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { audio.currentTime = Math.min((audio.duration||DUR), audio.currentTime + 3); pintar(); e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { audio.currentTime = Math.max(0, audio.currentTime - 3); pintar(); e.preventDefault(); }
+  });
+
+  new IntersectionObserver(([en]) => { principalVisible = en.isIntersecting; estado(); }, {threshold: 0})
+    .observe(document.querySelector('[data-reproductor]'));
+
+  // nav: mark the section in view
+  const enlaces = [...document.querySelectorAll('.top nav a')];
+  const secciones = enlaces.map(a => document.querySelector(a.getAttribute('href')));
+  const vigia = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) enlaces.forEach(a => a.setAttribute('aria-current', String(a.getAttribute('href') === '#' + en.target.id))); });
+  }, {rootMargin: '-45% 0px -50% 0px'});
+  secciones.forEach(s => s && vigia.observe(s));
+
+  // letters form: validates here; the list connection is set by the site's developer
+  const form = document.querySelector('[data-form]');
+  const aviso = document.querySelector('[data-aviso]');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const correo = form.querySelector('#f-correo');
+    const vacio = [...form.querySelectorAll('input[required]')].find(i => !i.value.trim());
+    aviso.classList.remove('error');
+    if (vacio) { aviso.textContent = 'falta tu ' + form.querySelector('label[for="' + vacio.id + '"]').textContent + '.'; aviso.classList.add('error'); vacio.focus(); return; }
+    if (!correo.checkValidity()) { aviso.textContent = 'revisa el correo: parece que le falta algo, como la @.'; aviso.classList.add('error'); correo.focus(); return; }
+    const destino = form.dataset.endpoint;
+    if (!destino) { aviso.textContent = 'vista previa: este formulario todavía no está conectado a la lista de correo.'; return; }
+    const boton = form.querySelector('button'); boton.disabled = true; aviso.textContent = 'enviando…';
+    const datos = {email: correo.value.trim(), name: form.querySelector('#f-nombre').value.trim(), country: form.querySelector('#f-pais').value.trim()};
+    fetch(destino, {method: 'POST', headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + SITIO.clave, 'apikey': SITIO.clave}, body: JSON.stringify(datos)})
+      .then(r => { if (!r.ok) throw 0; form.reset(); aviso.textContent = 'listo. te llega la primera carta pronto.'; })
+      .catch(() => { aviso.textContent = 'no se pudo enviar. revisa tu conexión e intenta otra vez.'; aviso.classList.add('error'); })
+      .finally(() => { boton.disabled = false; });
+  });
+})();
+</script>
+</body>
 </html>
